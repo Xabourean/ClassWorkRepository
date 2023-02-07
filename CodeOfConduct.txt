@@ -1,0 +1,11 @@
+Code of Conduct:
+1. Respect for diversity: All members of the team must show respect for one another, regardless of differences in race, gender, religion, political views, or any other personal characteristic.
+2. Professionalism: Team members are expected to behave in a professional manner, including prompt and respectful communication, meeting deadlines, and maintaining confidentiality.
+3. Collaboration: The team must work together to achieve the project goals and must communicate openly and honestly to resolve conflicts. If someone didn’t respond within 24 hours, he has to get the whole group snacks. 
+4. Responsibility: Each team member is responsible for their own work and must take ownership of their tasks.
+5. Ethical behavior: All members must adhere to ethical standards when conducting research, writing code, and presenting results.
+6. Use of resources: All team members must use project resources, such as computers and software, responsibly and in accordance with university policies.
+7. Continuous improvement: The team must strive to continually improve their processes and practices, seeking feedback and making changes as necessary.
+8. Attending meeting: scrum meetings should be attended regularly. If a team member is late on a couple of occasions, he has to get the whole groups members coffee/tea. If a member didn’t attend at all and doesn’t have a valid reason, he has to  get the whole group coffee/tea the next time we meet. 
+9. All group members must group together at all times for the duration of Software Engineering classes.
+10. Reporting violations: Any violations of this code of conduct must be reported to the instructor.
