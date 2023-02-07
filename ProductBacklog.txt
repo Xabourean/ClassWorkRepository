@@ -1,0 +1,124 @@
+Project requirements:
+
+-----------
+X: world, continent, region
+Y: world, continent, region, country, district
+ * All countries in X organised by largest population to smallest
+ * The top `N` populated X in the world where `N` is provided by the user
+ * All the cities in Y organised by largest population to smallest
+ * The top `N` populated cities in Y where `N` is provided by the user
+ * All the capital cities in X organised by largest population to smallest
+ * The top `N` populated capital cities in X where `N` is provided by the user
+ * The population of people, people living in cities, and people not living in X
+-----------
+the following information should be accessible to the organisation:
+▪ The population of the world
+▪ The population of a continent
+▪ The population of a region
+▪ The population of a country
+▪ The population of a district
+▪ The population of a city
+-----------
+provide the number of people who speak
+the following the following languages from greatest number to smallest, including the
+percentage of the world population:
+▪ Chinese
+▪ English
+▪ Hindi
+▪ Spanish
+▪ Arabic
+-----------
+country report with the following columns:
+▪ Code
+▪ Name
+▪ Continent
+▪ Region
+▪ Population
+▪ Capital
+-----------
+city report requires the following columns:
+▪ Name
+▪ Country
+▪ District
+▪ Population
+-----------
+capital city report requires the following columns:
+▪ Name
+▪ Country
+▪ Population
+-----------
+population reports, the following information is requested:
+▪ The name of the continent/region/country
+▪ The total population of the continent/region/country
+▪ The total population of the continent/region/country living in cities (including a %)
+▪ The total population of the continent/region/country not living in cities (including a %)
+-----------
+
+User interface design:
+
+Technology stack:
+PUG front-end
+Nod.js back-end
+MongoDB database for storage
+Docker for deployment
+
+Development environment:
+Git/Github version control
+Zube.io integration
+Kanban integration
+User stories, use cases, use case diagram for task definitions
+
+Feature development:
+Allow users to:
+Display data reports on any given area
+Data reports will be over population, language spoken, capital, region, continent, name, code
+Users may specify larger or smaller areas
+
+Quality assurance:
+Travis CI for testing
+
+Deployment:
+Progress will be deployed in sprints using docker
+
+Sprint 1 -
+Creation and organization of Github repository
+Dockerfile created
+Code of Conduct
+Product Backlog created
+
+Sprint 2 -
+Issues being used on GitHub
+Task definitions and use cases
+Zube.io integration
+Kanban integration
+Sprint Board use
+(Math for features written)
+(Database design outline)
+(UI design concepts)
+
+Sprint 3 -
+Test definitions
+Task board update
+Database design
+Database implementation
+HTML generated from PUG
+Dynamic content being pulled from database to templates vis PUG
+
+Sprint 4 -
+Final application with all requirements met
+Github metrics for proof of work
+Application deployable using a docker-compose file
+Final version of task board
+Bug reporting system
+Group report
+
+Documentation:
+Meetings will be logged on discord
+ Minutes taken by Jaz
+Metrics on github will record individual contributions
+A final report will be made by each project member
+
+Maintenance:
+▪ Being able to add new info (dataset) to the database
+▪ Applying security measures/login credentials (having a username and password)
+▪ Extra yet relevant functionality in your application
