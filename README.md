@@ -1,10 +1,10 @@
 # Software engineering coursewrok (Group 9W)
 
 This group contain four members
-    - Jad korayani
-    - Jaskaranbir Singh
-    - Logan
-    - Anas Boufangara
+* Jad korayani
+* Jaskaranbir Singh
+* Logan Sicking
+* Anas Boufangara
 
 
 ## Getting Started
