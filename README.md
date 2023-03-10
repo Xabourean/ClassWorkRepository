@@ -11,8 +11,8 @@ This group contain four members
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 The repository contain the following Folders
-    * Sprint_1
-    * Sprint_2
+* Sprint_1
+* Sprint_2
 
 ### Sprint 1
 
