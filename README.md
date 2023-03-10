@@ -26,11 +26,12 @@ In this folder we uploaded the following files
 
 In this folder we uploaded the following 
 * Personas
-* User story
-* Wireframe
+* User stories
+* Wireframes
 * Class diagram
 * Sequence diagram
 * State diagram
 * Use case diagram
 * Use cases
+* Wireflow diagram 
 
