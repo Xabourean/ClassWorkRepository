@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Data Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+        background-color: lightblue; /* Set the background color */
+    }
+    h1 {
+        text-align: center; /* Center the heading */
+        color: white; /* Set the heading color */
+    }
+    table {
+        margin: auto; /* Center the table */
+        background-color: white; /* Set the table background color */
+        border-collapse: collapse;
+        width: 50%; /* Set the table width */
+        margin-top: 20px; /* Add some margin at the top */
+        padding: 10px;
+        border: 1px solid black;
+        background-color: azure;
+    }
+    th, td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    tr:hover {
+        background-color: #e6e6e6; /* Set the row background color when hovered */
+    }
+    #filter {
+        margin-top: 100px; /* Add some margin at the top of the search input */
+        margin-bottom: 10px; /* Add some margin at the bottom of the search input */
+        margin-left: 480px; /* Position the search input to the left */
+        padding: 8px; /* Reduce the padding of the search input */
+        border-radius: 5px;
+        border: grey;
+        width: 200px; /* Reduce the width of the search input */
+        display: block; /* Make the search input a block element */
+        float: left; /* Float the search input to the left */
+    }
+	</style>
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Company Logo">
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Career</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="login-signup">
+        <button class="login">Login</button>
+        <button class="signup">Sign Up</button>
+      </div>
+    </header>
+	<h1>Data Page</h1>
+    <input type="text" id="filter" placeholder="Search...">
+	<table>
+		<tr>
+			<th>Country</th>
+			<th>Population</th>
+			<th>Continent</th>
+		</tr>
+		<tr>
+			<td>France</td>
+			<td>10,000</td>
+			<td>Europe</td>
+		</tr>
+        <tr>
+			<td>Brazil</td>
+			<td>3,000</td>
+			<td>South America</td>
+		</tr>		
+        <tr>
+			<td>Germany</td>
+			<td>5,000</td>
+			<td>Europe</td>
+		</tr>
+		<tr>
+			<td>Kenya</td>
+			<td>1,000,000</td>
+			<td>Africa</td>
+		</tr>
+	</table>
+    <footer>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Career</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="email-message">
+        <a href="#contact"><img src="email_icon.png" alt="Email/Message"></a>
+      </div>
+    </footer>
+</body>
+</html>
