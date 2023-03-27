@@ -1,0 +1,45 @@
+meta(charset="UTF-8")
+title Contact
+link(rel="stylesheet", href="style.css")
+header
+  .logo
+    img(src="logo.png", alt="Company Logo")
+  nav.navigation
+    ul
+      li
+        a(href="landing_page.html") Home
+      li
+        a(href="about.html") About
+      li
+        a(href="career.html") Career
+      li
+        a(href="contact.html") Contact
+  .login-signup
+    button.login
+      a(href="log_in.html") Login
+    button.signup
+      a(href="sign_up.html") Sign Up
+.contact-form
+  span.heading Contact Us
+  form
+    label(for="name") Name:
+    input(type="text", required)
+    label(for="email") Email:
+    input#email(type="email", name="email", required)
+    label(for="message") Message:
+    textarea#message(name="message", required)
+    button(type="submit") Submit
+footer
+  nav.navigation
+    ul
+      li
+        a(href="landing_page.html") Home
+      li
+        a(href="about.html") About
+      li
+        a(href="career.html") Career
+      li
+        a(href="contact.html") Contact
+  .email-message
+    a(href="contact.html")
+      img(src="email_icon.png", alt="Email/Message")
