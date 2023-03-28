@@ -35,3 +35,9 @@ In this folder we uploaded the following
 * Use cases
 * Wireflow diagram 
 
+
+### Sprint 3
+To run this program use the following commands:
+* docker compose up 
+
+In this folder we uploaded the following
