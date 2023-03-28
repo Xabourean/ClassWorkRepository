@@ -1,60 +1,59 @@
 doctype html
-html
-  head
-    meta(charset='UTF-8')
-    title Data Page
-    link(rel='stylesheet', href='style.css')
-  body
-    header
-      .logo
-        img(src='logo.png', alt='Company Logo')
-      nav.navigation
-        ul
-          li
-            a(href='#') Home
-          li
-            a(href='#') About
-          li
-            a(href='#') Career
-          li
-            a(href='#') Contact
-      .login-signup
-        button.login Login
-        button.signup Sign Up
-    h1 Data Page
-    input#filter(type='text', placeholder='Search...')
-    table
-      tr
-        th Country
-        th Population
-        th Continent
-      tr
-        td France
-        td 10,000
-        td Europe
-      tr
-        td Brazil
-        td 3,000
-        td South America
-      tr
-        td Germany
-        td 5,000
-        td Europe
-      tr
-        td Kenya
-        td 1,000,000
-        td Africa
-    footer
-      nav.navigation
-        ul
-          li
-            a(href='#') Home
-          li
-            a(href='#') About
-          li
-            a(href='#') Career
-          li
-            a(href='#contact') Contact
-      .email-message
-        a(href='#contact')
-          img(src='email_icon.png', alt='Email/Message')
+meta(charset="UTF-8")
+title Data Page
+link(rel="stylesheet", href="style2.css")
+header
+  .logo
+    img(src="logo.png", alt="Company Logo")
+  nav.navigation
+    ul
+      li
+        a(href="#") Home
+      li
+        a(href="#") About
+      li
+        a(href="#") Career
+      li
+        a(href="#") Contact
+  .login-signup
+    button.login Login
+    button.signup Sign Up
+h1 Data Page
+.search-container
+  input#filter(type="text", placeholder="Search...")
+table
+  tbody
+    tr
+      th Country
+      th Population
+      th Continent
+    tr
+      td France
+      td 10,000
+      td Europe
+    tr
+      td Brazil
+      td 3,000
+      td South America
+    tr
+      td Germany
+      td 5,000
+      td Europe
+    tr
+      td Kenya
+      td 1,000,000
+      td Africa
+footer
+  nav.navigation
+    ul
+      li
+        a(href="#") Home
+      li
+        a(href="#") About
+      li
+        a(href="#") Career
+      li
+        a(href="#contact") Contact
+  .email-message
+    a(href="#contact")
+      img(src="email_icon.png", alt="Email/Message")

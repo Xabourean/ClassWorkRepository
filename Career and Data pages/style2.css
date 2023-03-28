@@ -16,7 +16,15 @@ header {
   height: 80px;
   padding: 0 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to right, #0077b6, #0096c7, #00b4d8, #48cae4, #90e0ef, #ade8f4);
+  background: linear-gradient(
+    to right,
+    #0077b6,
+    #0096c7,
+    #00b4d8,
+    #48cae4,
+    #90e0ef,
+    #ade8f4
+  );
 }
 
 .container {
@@ -104,40 +112,52 @@ footer {
   color: #0077b6;
 }
 
+body {
+  background-color: lightblue; /* Set the background color */
+}
+h1 {
+  text-align: center; /* Center the heading */
+  color: white; /* Set the heading color */
+}
+.search-container {
+  position: fixed;
+  top: 100;
+  left: 22%;
+  transform: translateX(-50%);
+  z-index: 1;
+  padding: 10px;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-  body {
-      background-color: lightblue; /* Set the background color */
-  }
-  h1 {
-      text-align: center; /* Center the heading */
-      color: white; /* Set the heading color */
-  }
-  table {
-      margin: auto; /* Center the table */
-      background-color: white; /* Set the table background color */
-      border-collapse: collapse;
-      width: 50%; /* Set the table width */
-      margin-top: 20px; /* Add some margin at the top */
-      padding: 10px;
-      border: 1px solid black;
-      background-color: azure;
-  }
-  th, td {
-      padding: 15px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-  }
-  tr:hover {
-      background-color: #e6e6e6; /* Set the row background color when hovered */
-  }
-  #filter {
-      margin-top: 100px; /* Add some margin at the top of the search input */
-      margin-bottom: 10px; /* Add some margin at the bottom of the search input */
-      margin-left: 480px; /* Position the search input to the left */
-      padding: 8px; /* Reduce the padding of the search input */
-      border-radius: 5px;
-      border: grey;
-      width: 200px; /* Reduce the width of the search input */
-      display: block; /* Make the search input a block element */
-      float: left; /* Float the search input to the left */
-  }
+table {
+  margin: auto; /* Center the table */
+  background-color: white; /* Set the table background color */
+  border-collapse: collapse;
+  width: 50%; /* Set the table width */
+  margin-top: 100px; /* Add some margin at the top */
+  padding: 10px;
+  border: 1px solid black;
+  background-color: azure;
+}
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+tr:hover {
+  background-color: #e6e6e6; /* Set the row background color when hovered */
+}
+#filter {
+  margin-top: 100px; /* Add some margin at the top of the search input */
+  margin-bottom: 10px; /* Add some margin at the bottom of the search input */
+  margin-left: 480px; /* Position the search input to the left */
+  padding: 8px; /* Reduce the padding of the search input */
+  border-radius: 5px;
+  border: grey;
+  width: 200px; /* Reduce the width of the search input */
+  display: block; /* Make the search input a block element */
+  float: left; /* Float the search input to the left */
+}
