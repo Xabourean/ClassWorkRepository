@@ -1,5 +1,4 @@
 version: 2.1
-
 orbs:
   node: circleci/node@4.7.0
 jobs:
@@ -9,5 +8,5 @@ jobs:
       - image: cimg/node:lts
     steps: 
       - checkout:
-        path: ~/Sprint_3
+          path: ~/Sprint_3
       - run: npm install
