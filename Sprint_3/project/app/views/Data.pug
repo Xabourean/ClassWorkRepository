@@ -1,0 +1,16 @@
+extends ./Index
+block content
+    h1 Data Page
+    input#filter(type="text", placeholder="Search...")
+    table
+        tr
+            th City name
+            th Country code
+            th Population
+        for item in data
+            tr
+                td #{item.Name}
+                td #{item.CountryCode}
+                td #{item.Population}
+
+

@@ -1,0 +1,121 @@
+/*  */
+/*  Jas style for data Page */
+h1 {
+    text-align: center; /* Center the heading */
+    color: white; /* Set the heading color */
+}
+table {
+    margin: auto; /* Center the table */
+    background-color: white; /* Set the table background color */
+    border-collapse: collapse;
+    width: 50%; /* Set the table width */
+    margin-top: 20px; /* Add some margin at the top */
+    padding: 10px;
+    border: 1px solid black;
+    background-color: azure;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+tr:hover {
+    background-color: #e6e6e6; /* Set the row background color when hovered */
+}
+#filter {
+    margin-top: 100px; /* Add some margin at the top of the search input */
+    margin-bottom: 10px; /* Add some margin at the bottom of the search input */
+    margin-left: 480px; /* Position the search input to the left */
+    padding: 8px; /* Reduce the padding of the search input */
+    border-radius: 5px;
+    border: grey;
+    width: 200px; /* Reduce the width of the search input */
+    display: block; /* Make the search input a block element */
+    float: left; /* Float the search input to the left */
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 800px;
+    height: 500px;
+    margin: 80px auto;
+  }
+  
+  .box {
+    width: 800px;
+    height: 300px;
+    background-color: azure;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin: 10px;
+  }
+  
+  .box:hover {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+  }
+  
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .image img {
+    width: 80px;
+    height: 80px;
+  }
+
+  
+
+  body {
+    background-color: lightblue; /* Set the background color */
+}
+h1 {
+    text-align: center; /* Center the heading */
+    color: white; /* Set the heading color */
+}
+table {
+    margin: auto; /* Center the table */
+    background-color: white; /* Set the table background color */
+    border-collapse: collapse;
+    width: 50%; /* Set the table width */
+    margin-top: 20px; /* Add some margin at the top */
+    padding: 10px;
+    border: 1px solid black;
+    background-color: azure;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+tr:hover {
+    background-color: #e6e6e6; /* Set the row background color when hovered */
+}
+#filter {
+    margin-top: 100px; /* Add some margin at the top of the search input */
+    margin-bottom: 10px; /* Add some margin at the bottom of the search input */
+    margin-left: 480px; /* Position the search input to the left */
+    padding: 8px; /* Reduce the padding of the search input */
+    border-radius: 5px;
+    border: grey;
+    width: 200px; /* Reduce the width of the search input */
+    display: block; /* Make the search input a block element */
+    float: left; /* Float the search input to the left */
+}
+  
+/*  Jas style for data Page */
+
