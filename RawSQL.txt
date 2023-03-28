@@ -1,0 +1,208 @@
+PARAMETER:  All countries in X organised by largest population to smallest
+
+SELECT name, population
+FROM country
+WHERE continent = "X" OR region = "X" OR "X" = 'world'
+ORDER BY population DESC;
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+PARAMETER:  The top `N` populated X in the world where `N` is provided by the user
+
+SELECT * FROM `city`
+ORDER BY Population DESC 
+LIMIT N
+
+SELECT * FROM `country`
+ORDER BY Population DESC 
+LIMIT N
+
+SELECT X, SUM(population) AS total_population 
+FROM country
+GROUP BY X
+ORDER BY total_population DESC 
+LIMIT N
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+PARAMETER: All the cities in Y organised by largest population to smallest
+
+
+SELECT city.name, city.population
+FROM city
+INNER JOIN country
+ON city.CountryCode = country.code
+WHERE country.name = 'Y'
+ORDER BY city.population DESC;
+
+SELECT city.name, city.population
+FROM city
+INNER JOIN country ON city.CountryCode = country.code
+INNER JOIN (
+    SELECT DISTINCT code
+    FROM country
+    WHERE region = 'Y'
+    OR continent = 'Y'
+) AS region_or_continent ON region_or_continent.code = country.code
+ORDER BY city.population DESC;
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+PARAMETER: The top `N` populated cities in Y where `N` is provided by the user
+
+SELECT city.name, city.population 
+FROM city 
+INNER JOIN country ON city.CountryCode = country.code 
+WHERE country.region = 'Y' OR country.continent = 'Y' OR country.name = 'Y' 
+ORDER BY city.population DESC 
+LIMIT N;
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+PARAMETER: All the capital cities in X organised by largest population to smallest
+
+SELECT city.name, city.population 
+FROM city 
+INNER JOIN country ON city.ID = country.Capital
+WHERE country.region = 'Y' OR country.continent = 'Y' OR country.name = 'Y' 
+ORDER BY city.population DESC;
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+PARAMETER: The top `N` populated capital cities in X where `N` is provided by the user
+
+SELECT city.name, city.population 
+FROM city 
+INNER JOIN country ON city.ID = country.Capital 
+WHERE country.region = 'X' OR country.continent = 'X' OR country.name = 'X' 
+ORDER BY city.population DESC 
+LIMIT N;
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+PARAMETER: The population of the world, The population of a X
+
+SELECT SUM(population)
+FROM `country`
+
+SELECT 
+    SUM(city.population) as population 
+FROM 
+    city 
+    JOIN country ON city.CountryCode = country.Code 
+WHERE 
+    city.district = 'X' 
+    OR city.name = 'X' 
+    OR country.region = 'X' 
+    OR country.continent = 'X'
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+PARAMETER: provide the number of people who speak
+the following the following languages from greatest number to smallest, including the
+percentage of the world population:
+▪ Chinese
+▪ English
+▪ Hindi
+▪ Spanish
+▪ Arabic
+
+SELECT
+    language.Language,
+    SUM(country.Population * Language.Percentage / 100) AS Speakers,
+    SUM(country.Population * Language.Percentage / 100) / (SELECT SUM(Population) FROM country) * 100 AS PercentageOfWorldPopulation
+FROM
+    countrylanguage Language
+    JOIN country ON country.Code = Language.CountryCode
+WHERE
+    language.Language IN ('Chinese', 'English', 'Hindi', 'Spanish', 'Arabic')
+    AND language.IsOfficial = 'T'
+GROUP BY
+    language.Language
+ORDER BY
+    Speakers DESC;
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+PARAMETER: country report with the following columns:
+▪ Code
+▪ Name
+▪ Continent
+▪ Region
+▪ Population
+▪ Capital
+
+SELECT Code, Name, Continent, Region, Population, Capital
+FROM country;
+
+SELECT Code, Name, Continent, Region, Population, Capital
+FROM country
+WHERE Name = 'X'
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+PARAMETER: city report requires the following columns:
+▪ Name
+▪ Country
+▪ District
+▪ Population
+
+SELECT city.Name, country.Name AS Country, District, city.Population
+FROM city
+JOIN country ON city.CountryCode = country.Code
+ORDER BY Population DESC
+
+SELECT Name, CountryCode AS Country, District, Population
+FROM city
+WHERE Name = 'X';
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+PARAMETER: capital city report requires the following columns:
+▪ Name
+▪ Country
+▪ Population
+
+SELECT city.Name, country.Name AS Country, city.Population
+FROM city
+INNER JOIN country ON city.ID = country.Capital
+ORDER BY country.Name
+
+SELECT city.Name, country.Name AS Country, city.Population
+FROM city
+INNER JOIN country ON city.ID = country.Capital
+WHERE country.Name = 'X'
+
+SELECT city.Name, country.Name AS Country, city.Population
+FROM city
+INNER JOIN country ON city.ID = country.Capital
+WHERE city.Name = 'X'
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+PARAMETER: population reports, the following information is requested:
+▪ The name of the continent/region/country
+▪ The total population of the continent/region/country
+▪ The total population of the continent/region/country living in cities (including a %)
+▪ The total population of the continent/region/country not living in cities (including a %)
+
+SELECT 
+    CASE 
+        WHEN c1.Name = @input THEN 'country'
+        WHEN c2.Name = @input THEN 'region'
+        WHEN c3.Name = @input THEN 'continent'
+    END AS area_type,
+    COALESCE(c1.Name, c2.Name, c3.Name) AS area_name,
+    COALESCE(c3.Continent, c2.Region, c1.Name) AS parent_area,
+    COALESCE(c3.Population, c2.Population, c1.Population) AS total_population,
+    COALESCE(SUM(ci.Population), 0) AS city_population,
+    COALESCE(SUM(ci.Population) / COALESCE(c3.Population, c2.Population, c1.Population) * 100, 0) AS city_population_percentage,
+    COALESCE(COALESCE(c3.Population, c2.Population, c1.Population) - SUM(ci.Population), COALESCE(c3.Population, c2.Population, c1.Population)) AS remaining_population,
+    COALESCE((COALESCE(COALESCE(c3.Population, c2.Population, c1.Population) - SUM(ci.Population), COALESCE(c3.Population, c2.Population, c1.Population))) / COALESCE(c3.Population, c2.Population, c1.Population) * 100, 100) AS remaining_population_percentage
+FROM
+    country AS c1
+    LEFT JOIN city AS ci ON c1.Code = ci.CountryCode
+    LEFT JOIN country AS c2 ON c1.Region = c2.Code
+    LEFT JOIN country AS c3 ON c2.Continent = c3.Code
+WHERE
+    c1.Name = "X"
+    OR c2.Name = "X"
+    OR c3.Name = "X"
+GROUP BY
+    COALESCE(c3.Code, c2.Code, c1.Code);
