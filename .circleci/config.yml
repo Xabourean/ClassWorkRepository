@@ -7,8 +7,19 @@ jobs:
     docker:
       - image: cimg/node:lts
     steps:
-      - checkout:
-          path: ~/Sprint_3
-      - run: chmod -R 755 ~/Sprint_3/project
-      - run: npm install --dry-run # Add this step to simulate an install
-      - run: npm install # Remove this line when you're ready to actually install the packages
+      - checkout
+      - run:
+          name: Set permissions for project directory
+          command: chmod -R 755 ~/Sprint_3/project
+      - run:
+          name: Print working directory
+          command: pwd
+      - run:
+          name: List files in project directory
+          command: ls ~/Sprint_3/project
+      - run:
+          name: Simulate package installation
+          command: npm install --dry-run
+      - run:
+          name: Install packages
+          command: npm install
