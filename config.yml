@@ -1,0 +1,31 @@
+version: 2.1
+orbs:
+  node: circleci/node@4.7.0
+jobs:
+  build:
+    working_directory: ~/Sprint_3/project
+    docker:
+      - image: circleci/node:12.22.1-browsers
+    steps:
+      - checkout
+      - run:
+          name: Set permissions for project directory
+          command: chmod -R 755 ~/Sprint_3/project
+      - run:
+          name: Print working directory
+          command: pwd
+      - run:
+          name: List files in project directory
+          command: ls ~/Sprint_3/project
+      - run:
+          name: List file permissions in project directory
+          command: ls -la ~/Sprint_3/project
+      - run:
+          name: Find package.json file
+          command: find ~/Sprint_3/project -name "package.json"
+      - run:
+          name: Simulate package installation
+          command: npm install --dry-run
+      - run:
+          name: Install packages
+          command: npm install
