@@ -11,4 +11,4 @@ jobs:
           path: ~/Sprint_3
       - run:
           name: Install dependencies
-          command: npm install ~/Sprint_3/project/package.json
+          command: npm install ~/Sprint_3/project
