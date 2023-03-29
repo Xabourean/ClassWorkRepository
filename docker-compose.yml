@@ -1,0 +1,44 @@
+version: '3.8'
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  database:
+    container_name: mysqlContainer
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    volumes:
+      - ./Data/:/docker-entrypoint-initdb.d/
+    environment:
+      # Database
+      - MYSQL_DATABASE=world
+      # So you don't have to use root, but you can if you like
+      - MYSQL_USER=user
+      # You can use whatever password you like
+      - MYSQL_PASSWORD=password
+      # Password for root access
+      - MYSQL_ROOT_PASSWORD=password
+
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+    networks:
+      - app-tier 
+
+  webserver:
+    container_name: nodeJsContainer
+    build: ./project
+    command: bash -c 'while !</dev/tcp/database/3306; do sleep 1; done; npm start'
+    depends_on:
+      - database
+    restart: on-failure
+    environment:
+      - DATABASE_HOST=database
+    ports:
+      - 3000:3000
+    networks:
+      - app-tier 
