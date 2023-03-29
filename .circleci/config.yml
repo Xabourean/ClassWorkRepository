@@ -3,10 +3,11 @@ orbs:
   node: circleci/node@4.7.0
 jobs:
   build:
-    working_directory: ~/Sprint_3/project
+    working_directory: ~/ClassWorkRepository/Sprint_3/project
     docker:
       - image: cimg/node:lts
     steps: 
       - checkout:
-          path: ~/Sprint_3/project
-      - run: npm install
+          path: ~/ClassWorkRepository/Sprint_3/project
+      - run: npm install --save-exact
+      - run: npm test
