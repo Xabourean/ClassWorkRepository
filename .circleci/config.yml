@@ -17,13 +17,13 @@ jobs:
           command: pwd
       - run:
           name: List files in project directory
-          command: ls ~/Sprint_3/project
+          command: ls ~/ClassWorkRepository/Sprint_3/project
       - run:
           name: List file permissions in project directory
-          command: ls -la ~/Sprint_3/project
+          command: ls -la ~/ClassWorkRepository/Sprint_3/project
       - run:
           name: Find package.json file
-          command: find ~/Sprint_3/project -name "package.json"
+          command: find ~/ClassWorkRepository/Sprint_3/project -name "package.json"
       - run:
           name: Simulate package installation
           command: npm install --dry-run
