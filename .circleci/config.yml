@@ -3,27 +3,27 @@ orbs:
   node: circleci/node@4.7.0
 jobs:
   build:
-    working_directory: ~/ClassWorkRepository/Sprint_3/project
+    working_directory: ~/Sprint_3/project
     docker:
       - image: cimg/node:lts
     steps: 
       - checkout:
-          path: ~/ClassWorkRepository/Sprint_3
+          path: ~/Sprint_3
       - run:
           name: Set permissions for project directory
-          command: chmod -R 755 ~/ClassWorkRepository/Sprint_3/project
+          command: chmod -R 755 ~/Sprint_3/project
       - run:
           name: Print working directory
           command: pwd
       - run:
           name: List files in project directory
-          command: ls ~/ClassWorkRepository/Sprint_3/project
+          command: ls ~/Sprint_3/project
       - run:
           name: List file permissions in project directory
-          command: ls -la ~/ClassWorkRepository/Sprint_3/project
+          command: ls -la ~/Sprint_3/project
       - run:
           name: Find package.json file
-          command: find ~/ClassWorkRepository/Sprint_3/project -name "package.json"
+          command: find ~/Sprint_3/project -name "package.json"
       - run:
           name: Simulate package installation
           command: npm install --dry-run
