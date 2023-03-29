@@ -9,5 +9,6 @@ jobs:
     steps:
       - checkout:
           path: ~/Sprint_3
-      - run: chmod -R 755 ~/Sprint_3/project # Add this step to update file permissions
-      - run: npm install
+      - run: chmod -R 755 ~/Sprint_3/project
+      - run: npm install --dry-run # Add this step to simulate an install
+      - run: npm install # Remove this line when you're ready to actually install the packages
