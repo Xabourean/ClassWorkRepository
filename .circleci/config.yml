@@ -3,14 +3,15 @@ orbs:
   node: circleci/node@4.7.0
 jobs:
   build:
-    working_directory: ~/Sprint_3/project
+    working_directory: ~/ClassWorkRepository/Sprint_3/project
     docker:
       - image: cimg/node:lts
-    steps:
-      - checkout
+    steps: 
+      - checkout:
+          path: ~/ClassWorkRepository/Sprint_3
       - run:
           name: Set permissions for project directory
-          command: chmod -R 755 ~/Sprint_3/project
+          command: chmod -R 755 ~/ClassWorkRepository/Sprint_3/project
       - run:
           name: Print working directory
           command: pwd
