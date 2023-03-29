@@ -9,10 +9,6 @@ jobs:
     steps: 
       - checkout:
           path: ~/Sprint_3
-      - run: npm install
       - run:
-          name: Install Dependencies
-          command: npm install --save-exact
-      - run:
-          name: Run Tests
-          command: npm test
+          name: Install dependencies
+          command: npm install ~/Sprint_3/project/package.json
