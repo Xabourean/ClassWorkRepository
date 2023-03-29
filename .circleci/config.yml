@@ -18,6 +18,9 @@ jobs:
           name: List files in project directory
           command: ls ~/Sprint_3/project
       - run:
+          name: Find package.json file
+          command: find ~/Sprint_3/project -name "package.json"
+      - run:
           name: Simulate package installation
           command: npm install --dry-run
       - run:
