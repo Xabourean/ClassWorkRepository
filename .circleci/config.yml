@@ -10,5 +10,6 @@ jobs:
       - checkout:
           path: ~/Sprint_3
       - run: chmod -R 755 ~/Sprint_3/project
+      - run: ls -la ~/Sprint_3/project
       - run: find ~/Sprint_3/project -name "package.json"
       - run: npm install
