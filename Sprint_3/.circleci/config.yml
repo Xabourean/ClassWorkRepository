@@ -5,10 +5,9 @@ jobs:
   build:
     working_directory: ~/Sprint_3/project
     docker:
-      - image: cimg/node:lts
-    steps: 
-      - checkout:
-          path: ~/Sprint_3
+      - image: circleci/node:12.22.1-browsers
+    steps:
+      - checkout
       - run:
           name: Set permissions for project directory
           command: chmod -R 755 ~/Sprint_3/project
