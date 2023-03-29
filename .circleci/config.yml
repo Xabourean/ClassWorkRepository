@@ -1,14 +1,23 @@
 version: 2.1
-orbs:
-  node: circleci/node@4.7.0
+
 jobs:
   build:
-    working_directory: ~/Sprint_3/project
     docker:
-      - image: cimg/node:lts
+      - image: circleci/node:14.17.6
+    working_directory: ~/Sprint_3/project
     steps:
-      - checkout:
-          path: ~/Sprint_3
-      - run: chmod -R 755 ~/Sprint_3/project
-      - run: find ~/Sprint_3/project -name "package.json"
-      - run: npm install
+      - checkout
+      - run:
+          name: Remove node_modules and package-lock.json
+          command: |
+            rm -rf ~/Sprint_3/project/node_modules
+            rm ~/Sprint_3/project/package-lock.json
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Check installed packages
+          command: npm list --depth=0
+      - run:
+          name: Run tests
+          command: npm test
