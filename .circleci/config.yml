@@ -1,12 +1,12 @@
 version: 2.1
+orbs:
+  node: circleci/node@4.7.0
 jobs:
   build:
+    working_directory: ~/Sprint_3/project
     docker:
-      - image: circleci/node:10
-    working_directory: /home/circleci/ClassWorkRepository/Sprint_3/project
-    steps:
-      - checkout
-      - run: npm install --save-exact
-      - run:
-          name: Run tests
-          command: npm test
+      - image: cimg/node:lts
+    steps: 
+      - checkout:
+          path: ~/Sprint_3
+      - run: npm install
