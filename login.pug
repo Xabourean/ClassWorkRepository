@@ -1,0 +1,39 @@
+meta(charset="UTF-8")
+title Log in
+link(rel="stylesheet", href="style.css")
+header
+  .logo
+    img(src="logo.png", alt="Company Logo")
+  nav.navigation
+    ul
+      li
+        a(href="#") Home
+      li
+        a(href="#") About
+      li
+        a(href="#") Career
+      li
+        a(href="#") Contact
+  .login-signup
+    button.login Login
+    button.signup Sign Up
+form.log_in
+  input.input(placeholder="Email address or phone number", type="text")
+  input.input#password(placeholder="Password", type="password")
+  button#loginBtn Log in
+  a#forgotPassword(href="#") Forgotten password?
+  button.create#createAccountBtn Create new account
+footer
+  nav.navigation
+    ul
+      li
+        a(href="#") Home
+      li
+        a(href="#") About
+      li
+        a(href="#") Career
+      li
+        a(href="#contact") Contact
+  .email-message
+    a(href="#contact")
+      img(src="email_icon.png", alt="Email/Message")

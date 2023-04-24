@@ -1,0 +1,46 @@
+meta(charset="UTF-8")
+title Sign Up
+link(rel="stylesheet", href="style.css")
+header
+  .logo
+    img(src="logo.png", alt="Company Logo")
+  nav.navigation
+    ul
+      li
+        a(href="#") Home
+      li
+        a(href="#") About
+      li
+        a(href="#") Career
+      li
+        a(href="#") Contact
+  .login-signup
+    button.login Login
+    button.signup Sign Up
+.sign_up
+  form.sign_up
+    span.title Sign up
+    span.subtitle Create a free account with your email.
+    .form-container
+      input.input(type="text", placeholder="Full Name")
+      input.input(type="email", placeholder="Email")
+      input.input(type="password", placeholder="Password")
+    button Sign up
+  .form-section
+    p
+      | Have an account? 
+      a(href) Log in
+footer
+  nav.navigation
+    ul
+      li
+        a(href="#") Home
+      li
+        a(href="#") About
+      li
+        a(href="#") Career
+      li
+        a(href="#contact") Contact
+  .email-message
+    a(href="#contact")
+      img(src="email_icon.png", alt="Email/Message")
