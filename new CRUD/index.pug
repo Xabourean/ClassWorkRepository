@@ -1,0 +1,37 @@
+meta(charset="UTF-8")
+title CRUD
+link(href="index.css", rel="stylesheet")
+form.search
+  button
+    svg(width="16", height="16", fill="none", xmlns="http://www.w3.org/2000/svg", role="img", aria-labelledby="search")
+      path(d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9", stroke="currentColor", stroke-width="1.333", stroke-linecap="round", stroke-linejoin="round")
+  input.input(placeholder="Type your text", required, type="text")
+  button.reset(type="reset")
+    svg.h-6.w-6(xmlns="http://www.w3.org/2000/svg", fill="none", viewBox="0 0 24 24", stroke="currentColor", stroke-width="2")
+      path(stroke-linecap="round", stroke-linejoin="round", d="M6 18L18 6M6 6l12 12")
+.table-container
+  table
+    thead
+      tr
+        th ID
+        th City
+        th Population
+        th Continent
+        th Actions
+    tbody
+      tr
+        td 1
+        td Paris
+        td 80,000
+        td Europe
+        td
+          button.edit-button Edit
+          button.delete-button Delete
+      tr
+        td 2
+        td London
+        td 150,000
+        td Europe
+        td
+          button.edit-button Edit
+          button.delete-button Delete
