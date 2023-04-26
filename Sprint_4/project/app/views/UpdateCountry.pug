@@ -1,0 +1,13 @@
+extends ./Index 
+
+block content
+    form(action='/api/UpdateCountry', method='POST').sign_up
+        span.title Update country
+        span.subtitle Create a free account with your email.
+        .form-container
+        input(name="Name" type="text", placeholder="Name", value=`${data.Name}`, readonly).input
+        input(name="Continent" type="text", placeholder="Continent", value=`${data.Continent}`).input
+        input(name="Region" type="text", placeholder="Region", value=`${data.Region}`).input
+        input(name="Population" type="text", placeholder="Population", value=`${data.Population}`).input
+        button Update
+    .form-section

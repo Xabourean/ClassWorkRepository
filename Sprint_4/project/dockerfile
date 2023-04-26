@@ -1,0 +1,20 @@
+
+############ Docker file 
+# Start with '18.14.0' version of NodeJs. This is the latest version of NodeJs as of 02/08/2023
+FROM node:latest
+
+
+# The work directory will be '/Coursework_1/App'
+WORKDIR /app
+
+# Copying all information from 'package.json' and 'package-lock.json' to the container
+COPY ./ ./
+
+# Run the command 'npm install' to install all the needed packages needed from 'package.json' in the container 
+RUN npm install
+
+# Listenning on port 8000
+EXPOSE 3000 
+
+# Specify the commands to run the image
+CMD ["npm", "run", "start"]

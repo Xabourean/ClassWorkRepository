@@ -1,0 +1,16 @@
+extends ./Index 
+
+block content
+    form(action='/api/register', method='POST').sign_up
+        span.title Sign up
+        span.subtitle Create a free account with your email.
+        .form-container
+        input(name="firstName" type="text", placeholder="Fist Name").input
+        input(name="lastName" type="text", placeholder="Last Name").input
+        input(name="email" type="email", placeholder="Email").input
+        input(name="password" type="password", placeholder="Password").input
+        button Sign up
+    .form-section
+        p
+        | Have an account? 
+        a(href) Log in

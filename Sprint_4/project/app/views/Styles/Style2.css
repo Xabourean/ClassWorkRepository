@@ -1,0 +1,193 @@
+/*  */
+/*  Jas style for data Page */
+h1 {
+    text-align: center; /* Center the heading */
+    color: white; /* Set the heading color */
+}
+table {
+    margin: auto; /* Center the table */
+    background-color: white; /* Set the table background color */
+    border-collapse: collapse;
+    width: 50%; /* Set the table width */
+    margin-top: 20px; /* Add some margin at the top */
+    padding: 10px;
+    border: 1px solid black;
+    background-color: azure;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+tr:hover {
+    background-color: #e6e6e6; /* Set the row background color when hovered */
+}
+#filter {
+    margin-top: 100px; /* Add some margin at the top of the search input */
+    margin-bottom: 10px; /* Add some margin at the bottom of the search input */
+    margin-left: 480px; /* Position the search input to the left */
+    padding: 8px; /* Reduce the padding of the search input */
+    border-radius: 5px;
+    border: grey;
+    width: 200px; /* Reduce the width of the search input */
+    display: block; /* Make the search input a block element */
+    float: left; /* Float the search input to the left */
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 800px;
+    height: 500px;
+    margin: 80px auto;
+  }
+  
+  .box {
+    width: 800px;
+    height: 300px;
+    background-color: azure;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin: 10px;
+  }
+  
+  .box:hover {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+  }
+  
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .image img {
+    width: 80px;
+    height: 80px;
+  }
+
+  
+
+  body {
+    background-color: lightblue; /* Set the background color */
+}
+h1 {
+    text-align: center; /* Center the heading */
+    color: white; /* Set the heading color */
+}
+table {
+    margin: auto; /* Center the table */
+    background-color: white; /* Set the table background color */
+    border-collapse: collapse;
+    width: 50%; /* Set the table width */
+    margin-top: 20px; /* Add some margin at the top */
+    padding: 10px;
+    border: 1px solid black;
+    background-color: azure;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+tr:hover {
+    background-color: #e6e6e6; /* Set the row background color when hovered */
+}
+#filter {
+    margin-top: 100px; /* Add some margin at the top of the search input */
+    margin-bottom: 10px; /* Add some margin at the bottom of the search input */
+    margin-left: 480px; /* Position the search input to the left */
+    padding: 8px; /* Reduce the padding of the search input */
+    border-radius: 5px;
+    border: grey;
+    width: 200px; /* Reduce the width of the search input */
+    display: block; /* Make the search input a block element */
+    float: left; /* Float the search input to the left */
+}
+  
+/*  Jas style for data Page */
+
+
+
+/* Login Part*/
+logo img {
+    width: 180px; /* set the width to 200 pixels */
+    height: 140px; /* set the height to auto to maintain aspect ratio */
+  }
+  
+  /* style the navigation menu */
+  .navigation ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navigation li {
+    margin-right: 20px;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .navigation a:hover {
+    color: #0077b6;
+  }
+  
+  /* style the login and signup buttons */
+  .login-signup button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  .login-signup button.login {
+    background-color: #0077b6;
+    color: #fff;
+  }
+  
+  .login-signup button.signup {
+    background-color: #fff;
+    color: #0077b6;
+    border: 2px solid #0077b6;
+  }
+  
+  .login-signup button.signup:hover {
+    background-color: #0077b6;
+    color: #fff;
+  }
+  
+  /* style the Email/Message icon */
+  .email-message img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .email-message a:hover {
+    opacity: 0.8;
+  }
+
+
+

@@ -1,0 +1,8 @@
+extends ./Index 
+
+block content
+    form(action='/api/login', method='POST').log_in
+        input(name="email", placeholder="Email address or phone number", type="text").input
+        input(name="password", placeholder="Password", type="password").input#password
+        button#loginBtn Log in
+        a#forgotPassword(href="register") Create new account!
